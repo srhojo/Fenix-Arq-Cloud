@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: edge-one
+  webflux:
+    base-path: /${spring.application.name}
+
+server:
+  port: 0

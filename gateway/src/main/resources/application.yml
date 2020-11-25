@@ -1,0 +1,19 @@
+server:
+  port: 8080
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8083/eureka
+
+spring:
+  application:
+    name: gateway
+  cloud:
+    gateway:
+      routes:
+        - id: edgeOne
+          uri: lb://EDGE-ONE
+          predicates:
+            - Path=/edge-one/**
+
